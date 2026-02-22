@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Wheel</title>
+  </head>
+  <body>
+    <section class="game">
+      <div class="spin">
+        <div id="money">Money: 0.00</div>
+        <div class="wheel-wrap">
+          <div class="pointer"></div>
+          <div class="wheel" id="wheel"></div>
+        </div>
+        <div class="controls">
+          <label
+            >GREEN CHANCE:
+            <span class="procent" id="greenProcent">20%</span></label
+          >
+          <button id="spinBtn">SPIN</button>
+        </div>
+      </div>
+      <div id="result"></div>
+      <div id="shop">
+        <h2>Shop</h2>
+        <div id="upgrades">
+          <button data-upgrade="chance">
+            Increase Green Chance (5%) - <span id="chanceCost"></span>
+          </button>
+          <button data-upgrade="prize">
+            Increase Win Prize ($0.01) - <span id="prizeCost"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
