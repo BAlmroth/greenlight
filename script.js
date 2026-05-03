@@ -17,6 +17,7 @@ const lossQuotes = [
   "You are not good at this",
   "I feel bad for you",
   "ha ha ha ha",
+  "This is the entire game."
 ];
 //quotes when you win
 const winQuotes = [
