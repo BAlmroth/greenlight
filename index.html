@@ -8,6 +8,15 @@
   </head>
   <body>
     <section class="game">
+            <div id="stats">
+        <h2>Stats</h2>
+        <div id="statsContent">
+          <p>money per win: <span id="moneyPerWin">0.01</span></p>
+          <p>Combo bonus: <span id="comboBonus">1x</span></p>
+          <p>Combo multiplier: <span id="comboMultiplier">1x</span></p>
+          <p>spin time: <span id="spinTime">2000ms</span></p>
+      </div>
+      </div>
       <div class="spin">
         <div id="money">Money: 0.00</div>
         <div class="wheel-wrap">
@@ -31,6 +40,12 @@
           </button>
           <button data-upgrade="prize">
             Increase Win Prize ($0.01) - <span id="prizeCost"></span>
+          </button>
+          <button data-upgrade="speed">
+            Decrease Spin Speed (-2 ms) - <span id="speedCost"></span>
+          </button>
+          <button data-upgrade="combo">
+            Increase Combo Multiplier (0.5x) - <span id="comboCost"></span>
           </button>
         </div>
       </div>

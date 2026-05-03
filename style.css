@@ -126,6 +126,7 @@ button:disabled {
     background-color: #24242450;
     border-radius: 1rem;
     border: 2px solid #00000096;
+    padding: 1rem;
 }
 
 #result {
@@ -146,3 +147,17 @@ button:disabled {
 
 .result-row.win  { background: #2ecc7130; color: #33a563; }
 .result-row.loss { background: #e74c3c30; color: #c52d2d; }
+
+
+#stats, #shop, #statsContent, #upgrades {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: auto;
+}
+
+#stats {
+  height: 100%;
+  align-self: flex-start;
+  padding: 1rem;
+}
