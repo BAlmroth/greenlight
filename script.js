@@ -17,7 +17,7 @@ const lossQuotes = [
   "You are not good at this",
   "I feel bad for you",
   "ha ha ha ha",
-  "This is the entire game."
+  "This is the entire game.",
 ];
 //quotes when you win
 const winQuotes = [
@@ -132,8 +132,10 @@ function onResult(isWin) {
 
   if (isWin) {
     combo++;
-    money += moneyAmount * combo * comboBonus;
-    document.getElementById("comboMultiplier").textContent = combo + "x";
+    const comboMultiplierValue = Math.pow(comboBonus, Math.max(0, combo - 1));
+    money += moneyAmount * comboMultiplierValue;
+    document.getElementById("comboMultiplier").textContent =
+      comboMultiplierValue + "x";
     updateMoneyDisplay();
   } else {
     combo = 0;
@@ -200,7 +202,8 @@ function buyUpgrade(type) {
       const resultBox = document.getElementById("result");
       const row = document.createElement("div");
       row.className = "result-row win";
-      row.textContent = "CONGRATULATIONS YOU WIN! YOU JUST WASTED AN UNGODLY AMOUNT OF TIME. Go outside and watch some birds please";
+      row.textContent =
+        "CONGRATULATIONS YOU WIN! YOU JUST WASTED AN UNGODLY AMOUNT OF TIME. Go outside and watch some birds please";
       resultBox.append(row);
       resultBox.scrollTop = resultBox.scrollHeight;
     }
